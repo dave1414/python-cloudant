@@ -431,9 +431,9 @@ class DatabaseTests(UnitTestDbBase):
             page_size=1)
         self.assertIsInstance(rslt, Result)
         i = 0
-        for doc in rslt:
-            self.assertIsNotNone(doc)
-            self.assertEqual(doc['key'], i)
+        for row in rslt:
+            self.assertIsNotNone(row)
+            self.assertEqual(row['key'], i)
             i += 1
 
     def test_retrieve_raw_view_results(self):
